@@ -16,7 +16,29 @@ const getState = ({ getStore, getActions, setStore }) => {
 			]
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
+			login: async (email, password) => {
+				try {
+					const resp = await fetch(process.env.BACKEND_URL + "/api/login", {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json'
+						},
+						body: JSON.stringify({
+							email,
+							password
+						})
+					});
+		
+					if (!resp.ok) {
+						throw new Error('Auth error');
+					}
+		
+					const tokenJson = await resp.json();
+					console.log(tokenJson);
+				} catch (error) {
+					console.error('Error login in:', error);
+				}
+			},
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
