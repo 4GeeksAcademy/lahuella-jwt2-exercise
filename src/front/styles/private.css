@@ -1,14 +1,11 @@
-/* private.css */
-
-/* Estilos generales para la página privada */
 .home-container {
     position: relative;
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center; /* Alinea las tarjetas en el centro horizontal */
-    align-items: center; /* Alinea las tarjetas en el centro vertical */
-    flex-direction: column; /* Asegura que las tarjetas se apilen verticalmente */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background-image: url('https://images.wallpaperscraft.com/image/single/gym_dumbbells_inventory_219519_1920x1080.jpg');
     background-size: cover;
     background-position: center;
@@ -70,8 +67,7 @@
   .btn-signup:hover {
     background-color: #6d0fbf;
   }
-  
-  /* Estilo para el calendario */
+
   .react-calendar {
     width: 100%;
     max-width: 400px;
@@ -81,12 +77,11 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     padding: 10px;
   }
-  
-  /* Asegura que las tarjetas se alineen correctamente en pantallas más grandes */
+
   @media (min-width: 768px) {
     .home-container {
       justify-content: space-between;
-      flex-direction: row; /* Las tarjetas se alinearán horizontalmente en pantallas grandes */
+      flex-direction: row;
     }
   }
   

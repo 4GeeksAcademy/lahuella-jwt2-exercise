@@ -20,8 +20,9 @@ export const Login=()=>{
       });
 
       const data = await response.json();
+      console.log(data);
       if (response.ok) {
-        sessionStorage.setItem('token', data.token);
+        localStorage.setItem('token', data.access_token);
         navigate('/private');
       } else {
         setError(data.message);
